@@ -16,8 +16,8 @@ include_once "../modele/Bdd.php";
       <caption>Tous les equipements de boxe, rien que pour vous </caption>
       <thead>
         <tr>
-          <td id="couleurTableau">sport</td>
-          <td id="couleurTableau">Nom du sport</td>
+        <td id="couleurTableau">Rayon</td>
+          <td id="couleurTableau">Nom du produit</td>
           <td id="couleurTableau">Déscription</td>
           <td id="couleurTableau">Photo du produit</td>
           <td id="couleurTableau">quantité magasin</td>
