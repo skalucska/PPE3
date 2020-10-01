@@ -3,7 +3,7 @@
 <head>
 	<title>ALL4SPORT</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="../controller/style1.css" type="text/css" media="screen" charset="utf-8">
+	<link rel="stylesheet" href="../vue/css/style1.css" type="text/css" media="screen" charset="utf-8">
 </head>
 
 <body>

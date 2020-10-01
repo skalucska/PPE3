@@ -44,3 +44,18 @@ ol, ul {
             background-color: grey;
             height: 100px;
         }
+
+        /*
+          #header {
+            background: url("   ") repeat;
+            height: 72px; }
+
+            #footer {
+                position: relative;
+                margin-top: -57px;
+               negative value of footer height 
+                height: 57px;
+                clear: both;
+                background: url("img/footer.png") repeat; } 
+                
+                */

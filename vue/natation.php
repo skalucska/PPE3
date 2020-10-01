@@ -33,7 +33,7 @@ include_once "../modele/Bdd.php";
           $bdd = new Bdd();
           $sport = $bdd->giveNatation();
           foreach ($sport as $row) {
-            echo "<tr><td>".$row['pr_category'].'</td><td>'.$row['pr_nom'].'</td><td>'.$row['desc_pro'].'</td><td>'.$row['image'].'</td><td>'.$row['quant_stock_mag'].'</td><td>'.$row['quant_stock_int'].'</td><td>'.$row['lieu_stock'].'</td><td>'.$row['pr_uht'].'</td><br></tr>';
+            echo "<tr><td>".$row['pr_category'].'</td><td>'.$row['pr_nom'].'</td><td>'.$row['desc_pro'].'</td><td>'.$row['image'].'</td><td>'.$row['quant_stock_mag'].'</td><td>'.$row['quant_stock_int'].'</td><td>'.$row['lieu_stock'].'</td><td>'.$row['pr_uht'].'</td></tr>';
           }
            ?>
         </tr>

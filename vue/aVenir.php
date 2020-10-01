@@ -24,7 +24,7 @@ window.onload = function () {
   var backgroundImg=["../vue/img/Golf.jpg",
                     "../vue/img/muscu.jpg",
                     "../vue/img/foot.jpg",
-                    "../vue/img/randonnée.jpg",
+                    "../vue/img/randonnee.jpg",
                     "../vue/img/tennis.jpg",
                     "../vue/img/rugby.jpg",
                     "../vue/img/basketball.jpg"
