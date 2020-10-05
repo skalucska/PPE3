@@ -45,17 +45,30 @@ ol, ul {
             height: 100px;
         }
 
-        /*
-          #header {
-            background: url("   ") repeat;
-            height: 72px; }
+        .image {
+            width: 250px;
+        }
 
-            #footer {
-                position: relative;
-                margin-top: -57px;
-               negative value of footer height 
-                height: 57px;
-                clear: both;
-                background: url("img/footer.png") repeat; } 
-                
-                */
+        
+        #header {
+            background: url("img2/header.png") repeat;
+            height: 72px; 
+        }
+
+
+        #subheader {
+            background: url("img2/subheader.png") repeat;
+            height: 45px; }
+
+
+
+        #footer {
+            position: relative;
+            margin-top: -57px;
+            negative: value of footer height;
+            height: 57px;
+            clear: both;
+            background: url("img2/footer.png") repeat; 
+        } 
+
+       

@@ -11,10 +11,14 @@
 
 <br>
 <br>
-
+<br>
+<br>
+<br>
+<br>
 <div id="footer">
     <div class="wrap">
-        <p>© ALL4SPORT, uns site de e-commerce pour l'équipement de sport • Bultez / Perraux / Dufour / Legros</p>
+    <br>
+        <h3>© ALL4SPORT, uns site de e-commerce pour l'équipement de sport • Bultez / Perraux / Dufour / Legros</h3>
     </div>
 </div>
 

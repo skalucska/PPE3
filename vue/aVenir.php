@@ -10,6 +10,8 @@
 }
 </style>
 
+
+
 <h1 class="center"><em>Devinez ce qu'il vous attend ! <em></h1>
 <br>
 <h2 class="milieu"><em>Et oui<em></h2>
@@ -18,6 +20,7 @@
 
     
     <div></div>
+
 
 <script>
 window.onload = function () {
