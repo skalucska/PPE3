@@ -20,8 +20,7 @@ include_once "../modele/Bdd.php";
           <td id="couleurTableau">Nom du produit</td>
           <td id="couleurTableau">Déscription</td>
           <td id="couleurTableau">Photo du produit</td>
-          <td id="couleurTableau">quantité magasin</td>
-          <td id="couleurTableau">quantité internet</td>
+          <td id="couleurTableau">quantité magasin & internet</td>
           <td id="couleurTableau">Lieux de disponibilité</td>
           <td id="couleurTableau">Prix UHT</td>
         </tr>
@@ -32,7 +31,7 @@ include_once "../modele/Bdd.php";
           $bdd = new Bdd();
           $sport = $bdd->giveBoxe();
           foreach ($sport as $row) {
-            echo "<tr><td>".$row['pr_category'].'</td><td>'.$row['pr_nom'].'</td><td>'.$row['desc_pro'].'</td><td>'.$row['image'].'</td><td>'.$row['quant_stock_mag'].'</td><td>'.$row['quant_stock_int'].'</td><td>'.$row['lieu_stock'].'</td><td>'.$row['pr_uht'].'</td></tr>';
+            echo "<tr><td>".$row['Rayon'].'</td><td>'.$row['Nom du produit'].'</td><td>'.$row['Description du produit'].'</td><td>'.$row['Cliché'].'</td><td>'.$row['quantité'].'</td><td>'.$row['magasin'].'</td><td>'.$row['Prix'].'</td></tr>';
           }
            ?>
         </tr>

@@ -10,8 +10,8 @@
 
 <div id="header">
     <div class="wrap">
-				<a href="../controller/index.php" class="logo"><img class="image" src="../vue/img/all4sportv2.png"></a>
-                <h1>Le meilleur site d'achat d'équipement de sport.</h1>
+				<a href="../controller/index.php" class="logo"><img class="image" src="../vue/img/all4sport.pn"></a>
+                <h2>Le meilleur site d'achat d'équipement de sport.</h2>
     </div>
 </div>
 
@@ -26,10 +26,10 @@
 		<ul class="wrap">
 			<li id="horizontal"> <a href="../controller/index.php">Tous les produits </a> </li>
 			<li id="horizontal"> <a href="../vue/badminton.php">Badminton</a> </li>
-			<li id="horizontal"> <a href="../vue/velo.php">Vélo</a> </li>
-			<li id="horizontal"> <a href="../vue/equitation.php">Equitation </a> </li>
 			<li id="horizontal"> <a href="../vue/boxe.php">Boxe</a> </li>
+			<li id="horizontal"> <a href="../vue/equitation.php">Equitation </a> </li>
 			<li id="horizontal"> <a href="../vue/natation.php">Natation</a> </li>
+			<li id="horizontal"> <a href="../vue/velo.php">Vélo</a> </li>
 			<li id="horizontal"> <a href="../vue/aVenir.php">De nouveau produit très prochainement !</a> </li>
 		</ul>
  </div>
@@ -38,3 +38,5 @@
 </body>
 
 </html>
+
+

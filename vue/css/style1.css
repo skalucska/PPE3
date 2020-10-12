@@ -72,3 +72,9 @@ ol, ul {
         } 
 
        
+
+#image_posi{    
+ background-position: center;
+ background-size: cover;
+ min-height: 100%;
+}

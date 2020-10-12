@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ALL4SPORT</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="../vue/css/style1.css" type="text/css" media="screen" charset="utf-8">
+</head>
+
+
 <style>
 .center {
   display: block;
@@ -22,7 +31,7 @@
     <div></div>
 
 
-<script>
+<script id="image_posi">
 window.onload = function () {
   var backgroundImg=["../vue/img/Golf.jpg",
                     "../vue/img/muscu.jpg",
