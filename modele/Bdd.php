@@ -5,7 +5,7 @@ class Bdd{
 
 public function __construct(){
       try {
-        $dsn = 'mysql:dbname=magasin;host=127.0.0.1:3308';
+        $dsn = 'mysql:dbname=ventes;host=127.0.0.1:3308';
         $this->dbh = new PDO($dsn, 'root', '');
       } catch (PDOException $e){
         echo 'connexion échouée : '.$e->getMessage();
@@ -13,7 +13,7 @@ public function __construct(){
 }
 
   public function getAllSport(){
-    $res = $this->dbh->query('SELECT p.pr_category as Rayon , p.pr_nom as `Nom du produit`, p.desc_pro as `Description du produit`, image as ` Cliché`, SUM(s.quant_stock) OVER(PARTITION BY p.pr_category) as quantité, nom_mag as magasin, p.pr_uht as Prix  From produits p join image_produits i on p.id_pro = i.fk_id_pro join stocker s on  s.fk_id_pro = p.id_pro join magasin on fk_id_mag = id_mag where s.quant_stock >= 0;', PDO::FETCH_ASSOC);
+    $res = $this->dbh->query('SELECT id_pro, p.pr_category as Rayon , p.pr_nom as `Nom du produit`, p.desc_pro as `Description du produit`, image as ` Cliché`, SUM(s.quant_stock) OVER(PARTITION BY p.pr_category) as quantité, nom_mag as magasin, p.pr_uht as Prix  From produits p join image_produits i on p.id_pro = i.fk_id_pro join stocker s on  s.fk_id_pro = p.id_pro join magasin on fk_id_mag = id_mag where s.quant_stock >= 0;', PDO::FETCH_ASSOC);
     return $res->fetchALL();
   }
 
@@ -129,6 +129,29 @@ public function __construct(){
                                     and p.pr_category="Velo";', PDO::FETCH_ASSOC);
     return $res->fetchAll();
   }
+
+
+
+
+
+  public function getDetail($idPro) {
+    $res = $this->dbh->prepare('SELECT p.id_pro , 
+                                      p.pr_category as Rayon,
+                                      p.pr_nom as `Nom du produit`,
+                                      p.desc_pro as `Description du produit`,
+                                      image as ` Cliché`, 
+                                    SUM(s.quant_stock) OVER(PARTITION BY p.pr_category) as quantité , 
+                                    nom_mag as magasin,
+                                    p.pr_uht as Prix 
+                                    From produits p
+                                      join image_produits i on p.id_pro = i.fk_id_pro
+                                      join stocker s on  s.fk_id_pro = p.id_pro
+                                      join magasin on fk_id_mag = id_mag 
+                                      where s.quant_stock >= 0
+                                      and p.id_pro = :id ";');
+    $res->execute(array(":id" => $idPro));
+    return $res->fetchALL();
+}
 
 
 }
