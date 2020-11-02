@@ -10,18 +10,17 @@
 <div>
     <div class="wrap">
 
-    <h2>Vous vous interesez au <?php //echo $row['Rayon'];?>//// , alors nos articles sont fait pour vous.</h2> 
+    <h2>Vous vous interesez au <?php echo $detail['Rayon'];?>, alors nos articles sont fait pour vous.</h2> 
 
 
-      <caption>Tous les equipements de <?php //echo $row['Rayon'];?>//// , rien que pour vous </caption>
-      
-      
+      <h5>Tous les equipements de <?php echo $detail['Rayon'];?>, rien que pour vous </h5>
+      <br>
       
     Rayon : <?php echo $detail['Rayon'];?>
     <br>
-    Nom du produit : <?php echo $detail['pr_nom'];?>
+    Nom du produit : <?php echo $detail['Nom du produit'];?>
     <br>
-    Description : <?php echo $detail['pr_desc'];?>
+    Description : <?php echo $detail['Description du produit'];?>
     <br>
       
       
