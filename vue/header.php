@@ -10,7 +10,9 @@
 
 <div id="header">
     <div class="wrap">
-				<a href="../controller/index.php" class="logo"><img class="image" src="../vue/img/all4sport.pn"></a>
+				<a href="../controller/index.php" ><img class="image" src="../vue/img/all4sport.PNG"></a>
+    </div>
+	<div class="wrap">
                 <h2>Le meilleur site d'achat d'équipement de sport.</h2>
     </div>
 </div>
@@ -20,7 +22,7 @@
 		<h2><b>Bienvenue sur le site ALL4SPORT</b>.</h2>
 	</div>
 </div>
-<br>
+
 
 <div id="menu">
 		<ul class="wrap">

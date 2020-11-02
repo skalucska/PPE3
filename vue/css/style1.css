@@ -71,10 +71,7 @@ ol, ul {
             background: url("img2/footer.png") repeat; 
         } 
 
-       
-
-#image_posi{    
- background-position: center;
- background-size: cover;
- min-height: 100%;
-}
+       .image{
+        max-width: 100%;
+        height: auto;
+       }

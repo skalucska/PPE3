@@ -17,11 +17,11 @@
       
       
       
-    nom de la serie : <?php echo $detail['pr_category'];?>
+    Rayon : <?php echo $detail['Rayon'];?>
     <br>
-    Synopsis : <?php echo $detail['pr_nom'];?>
+    Nom du produit : <?php echo $detail['pr_nom'];?>
     <br>
-    Theme : <?php echo $detail['pr_desc'];?>
+    Description : <?php echo $detail['pr_desc'];?>
     <br>
       
       
