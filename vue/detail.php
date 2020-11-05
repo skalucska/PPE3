@@ -11,9 +11,9 @@
     <div class="wrap">
 
     <h2>Vous vous interesez au <?php echo $detail['Rayon'];?>, alors nos articles sont fait pour vous.</h2> 
+    <br>
 
-
-      <h5>Tous les equipements de <?php echo $detail['Rayon'];?>, rien que pour vous </h5>
+      <h2>Tous les equipements de <?php echo $detail['Rayon'];?>, rien que pour vous </h2>
       <br>
       
     Rayon : <?php echo $detail['Rayon'];?>
@@ -22,6 +22,11 @@
     <br>
     Description : <?php echo $detail['Description du produit'];?>
     <br>
+    Quantité: <?php echo $detail['quantité'];?>
+    <br>
+    Lieux de disponibilité : <?php echo $detail['magasin'];?>
+    <br>
+    Prix: <?php echo $detail['Prix'];?>
       
       
       
