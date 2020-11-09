@@ -134,7 +134,7 @@ public function __construct(){
 
 
 
-  public function getDetail($idPro) {
+  public function getDetail($idFour, $idrayon, $idPro) {
     $res = $this->dbh->prepare('SELECT p.id_pro , 
                                       p.pr_category as Rayon,
                                       p.pr_nom as `Nom du produit`,
@@ -148,9 +148,12 @@ public function __construct(){
                                       join stocker s on  s.fk_id_pro = p.id_pro
                                       join magasin on fk_id_mag = id_mag 
                                       where s.quant_stock >= 0
-                                      and p.id_pro = :id');
+                                      and fk_nom_four = :nomFour
+                                      and fk_id_ray= :rayon
+                                      and fk_id_pro = :pro');
+                                      
     
-    $res->execute(array(":id" => $idPro));
+    $res->execute(array(":nomFour"=>$idFour,":rayon"=> $idRayon,":pro" => $idPro));
     return $res->fetch();
 }
 

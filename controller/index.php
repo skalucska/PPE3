@@ -29,7 +29,7 @@ include_once "../modele/Bdd.php";
           $sport = $bdd->getAllSport();
           foreach ($sport as $row) {
             echo "<tr><td>".$row['Rayon'].'</td><td>'.$row['Nom du produit'].'</td><td>'.$row['Description du produit'].'</td><td>'.$row['Cliché'].'</td>';
-            echo "<td><a href=../Controller/detail-prod.php?id=". $row['id_pro']."> Detail </a></td></tr>";
+            echo "<td><a href=../Controller/detail-prod.php?nomFour=".$row['fk_nom_four']."&&rayon=".$row['fk_id_ray']."&&pro=".$row['fk_id_pro']."> Detail </a></td></tr>";
           }
            ?>
         </tr>

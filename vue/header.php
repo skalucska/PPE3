@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>ALL4SPORT</title>
-	<meta charset="utf-8">
+	<meta charset="utf-8" http-equiv="pragma" content="no-cache"/>
 	<link rel="stylesheet" href="../vue/css/style1.css" type="text/css"  charset="utf-8">
 </head>
 
