@@ -148,9 +148,9 @@ public function __construct(){
                                       join stocker s on  s.fk_id_pro = p.id_pro
                                       join magasin on fk_id_mag = id_mag 
                                       where s.quant_stock >= 0
-                                      and p.id_pro = ?');
+                                      and p.id_pro = :id');
     
-    $res->execute(array($idPro));
+    $res->execute(array(":id" => $idPro));
     return $res->fetch();
 }
 

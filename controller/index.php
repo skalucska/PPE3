@@ -10,18 +10,6 @@ include_once "../modele/Bdd.php";
     
   <h2>Retrouvez chez ALL4SPORT tous vos sport préfèré du badminton a la boxe en passant par l'équitation, et oui vous vous en doutiez il y en a pour tous les gouts.</h2> 
 
-
-     <!-- <form action="index.php" method="" class="">
-
-        <select id="">
-            <option value="">-- Trier par : --</option>
-            <option value="ray">Rayon <?php //$bdd = new Bdd(); $sport = $bdd->getAllSport(); ?> </option>
-            <option value="asc">Prix croissant <?php //$bdd = new Bdd(); $sport = $bdd->getPrixASC();?></option>
-            <option value="desc">Prix decroissant <?php //$bdd = new Bdd(); $sport = $bdd->getPrixDESC();?></option>
-        </select>
-        <input type="submit" value="valider !">
-      </form> !-->
-  
     <table>
     
       <thead>
