@@ -3,18 +3,17 @@
 <head>
 	<title>ALL4SPORT</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="../vue/css/style1.css" type="text/css" media="screen" charset="utf-8">
+	<link rel="stylesheet" href="../vue/css/style1.css" type="text/css"  charset="utf-8">
 </head>
 
 <body>
 
 <div id="header">
     <div class="wrap">
-				<a href="../controller/index.php" ><img class="image" src="../vue/img/all4sport.PNG"></a>
+				<a href="../controller/index.php" > <img class="image" src="../vue/img/all4sport.PNG"></a>
+				
     </div>
-	<div class="wrap">
-                <h2>Le meilleur site d'achat d'équipement de sport.</h2>
-    </div>
+	
 </div>
 
 <div id="subheader">
