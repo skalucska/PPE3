@@ -13,7 +13,21 @@ public function __construct(){
 }
 
   public function getAllSport(){
-    $res = $this->dbh->query('SELECT id_pro, p.pr_category as Rayon , p.pr_nom as `Nom du produit`, p.desc_pro as `Description du produit`, image as ` Cliché`, SUM(s.quant_stock) OVER(PARTITION BY p.pr_category) as quantité, nom_mag as magasin, p.pr_uht as Prix  From produits p join image_produits i on p.id_pro = i.fk_id_pro join stocker s on  s.fk_id_pro = p.id_pro join magasin on fk_id_mag = id_mag where s.quant_stock >= 0;', PDO::FETCH_ASSOC);
+    $res = $this->dbh->query('SELECT p.id_pro as idPro,
+                                    p.nom_four as idFour,
+                                    p.fk_id_ray as idRay, 
+                                    p.pr_category as Rayon , 
+                                    p.pr_nom as `Nom du produit`, 
+                                    p.desc_pro as `Description du produit`, 
+                                    image as ` Cliché`, 
+                                    SUM(s.quant_stock) OVER(PARTITION BY p.pr_category) as quantité, 
+                                    nom_mag as magasin, 
+                                    p.pr_uht as Prix  
+                                  From produits p 
+                                  join image_produits i on p.id_pro = i.fk_id_pro 
+                                  join stocker s on  s.fk_id_pro = p.id_pro 
+                                  join magasin on fk_id_mag = id_mag 
+                                  where s.quant_stock >= 0;', PDO::FETCH_ASSOC);
     return $res->fetchALL();
   }
 
@@ -134,8 +148,10 @@ public function __construct(){
 
 
 
-  public function getDetail($idFour, $idrayon, $idPro) {
-    $res = $this->dbh->prepare('SELECT p.id_pro , 
+  public function getDetail($idFour, $idRay, $idPro) {
+    $res = $this->dbh->prepare('SELECT  p.id_pro as idPro,
+                                      p.nom_four as idFour,
+                                      p.fk_id_ray as idRay, 
                                       p.pr_category as Rayon,
                                       p.pr_nom as `Nom du produit`,
                                       p.desc_pro as `Description du produit`,
@@ -148,12 +164,12 @@ public function __construct(){
                                       join stocker s on  s.fk_id_pro = p.id_pro
                                       join magasin on fk_id_mag = id_mag 
                                       where s.quant_stock >= 0
-                                      and fk_nom_four = :nomFour
-                                      and fk_id_ray= :rayon
-                                      and fk_id_pro = :pro');
+                                      and p.nom_four = :idFour
+                                      and p.fk_id_ray= :idRay
+                                      and p.id_pro = :idPro');
                                       
     
-    $res->execute(array(":nomFour"=>$idFour,":rayon"=> $idRayon,":pro" => $idPro));
+    $res->execute(array(":idFour" => $idFour,":idRay" => $idRay,":idPro" => $idPro));
     return $res->fetch();
 }
 
