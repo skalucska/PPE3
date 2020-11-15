@@ -5,7 +5,7 @@ include_once "../modele/Bdd.php";
 
 
 
-    
+
 <div>
     <div class="wrap">
 
@@ -30,12 +30,12 @@ include_once "../modele/Bdd.php";
           $bdd = new Bdd();
           $sport = $bdd->giveBadminton();
           foreach ($sport as $row) {
-            echo "<tr><td>".$row['Rayon'].'</td><td>'.$row['Nom du produit'].'</td><td>'.$row['Description du produit'].'</td><td>'.$row['Cliché'].'</td><td>'.$row['quantité'].'</td><td>'.$row['magasin'].'</td><td>'.$row['Prix'].'</td></tr>';
+            echo "<tr><td>".$row['Rayon'].'</td><td>'.$row['Nom du produit'].'</td><td>'.$row['Description du produit'].'</td><td>'.'<img src="data:image/jpeg;base64,'.base64_encode($row['Cliché']).'"></td><td>'.$row['quantité'].'</td><td>'.$row['magasin'].'</td><td>'.$row['Prix'].'</td></tr>';
           }?>
         </tr>
       </tbody>
-    </table> 
-    
+    </table>
+
     </div>
 </div>
 

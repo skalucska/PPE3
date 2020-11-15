@@ -27,6 +27,10 @@
     Lieux de disponibilité : <?php echo $detail['magasin'];?>
     <br>
     Prix: <?php echo $detail['Prix'];?>
+    <br>
+    Photo: 
+    <br>
+    <?php echo '<img src="data:image/jpeg;base64,'.base64_encode($detail['Cliché']).'">';?>
       
       
       

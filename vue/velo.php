@@ -7,11 +7,11 @@ include_once "../modele/Bdd.php";
 
 <div>
     <div class="wrap">
-    
+
 
     <h2>Vous vous interesez au Velo, alors nos articles sont fait pour vous.</h2>
 
-    
+
     <table>
       <caption>Tous les equipements de vélo, rien que pour vous </caption>
       <thead>
@@ -31,13 +31,13 @@ include_once "../modele/Bdd.php";
           $bdd = new Bdd();
           $sport = $bdd->giveVelo();
           foreach ($sport as $row) {
-            echo "<tr><td>".$row['Rayon'].'</td><td>'.$row['Nom du produit'].'</td><td>'.$row['Description du produit'].'</td><td>'.$row['Cliché'].'</td><td>'.$row['quantité'].'</td><td>'.$row['magasin'].'</td><td>'.$row['Prix'].'</td></tr>';
+            echo "<tr><td>".$row['Rayon'].'</td><td>'.$row['Nom du produit'].'</td><td>'.$row['Description du produit'].'</td><td>'.'<img src="data:image/jpeg;base64,'.base64_encode($row['Cliché']).'"></td><td>'.$row['quantité'].'</td><td>'.$row['magasin'].'</td><td>'.$row['Prix'].'</td></tr>';
           }
            ?>
         </tr>
       </tbody>
-    </table> 
-    
+    </table>
+
     </div>
 </div>
 

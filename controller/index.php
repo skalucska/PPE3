@@ -7,11 +7,11 @@ include_once "../modele/Bdd.php";
     <div class="wrap">
     <h1>Voici nos produits, ne soyez pas timide faites votre choix</h1>
 
-    
-  <h2>Retrouvez chez ALL4SPORT tous vos sport préfèré du badminton a la boxe en passant par l'équitation, et oui vous vous en doutiez il y en a pour tous les gouts.</h2> 
+
+  <h2>Retrouvez chez ALL4SPORT tous vos sport préfèré du badminton a la boxe en passant par l'équitation, et oui vous vous en doutiez il y en a pour tous les gouts.</h2>
 
     <table>
-    
+
       <thead>
         <tr>
           <td id="couleurTableau">Rayon</td>
@@ -28,15 +28,15 @@ include_once "../modele/Bdd.php";
           $bdd = new Bdd();
           $sport = $bdd->getAllSport();
           foreach ($sport as $row) {
-            echo "<tr><td>".$row['Rayon'].'</td><td>'.$row['Nom du produit'].'</td><td>'.$row['Description du produit'].'</td><td>'.$row['Cliché'].'</td>';
-            echo "<td><a href=../Controller/detail-prod.php?id=".$row['idFour']."&&id2=".$row['idRay']."&&id3=".$row['idPro']."> Detail </a></td></tr>";
+            echo "<tr><td>".$row['Rayon'].'</td><td>'.$row['Nom du produit'].'</td><td>'.$row['Description du produit'].'</td><td>'.'<img src="data:image/jpeg;base64,'.base64_encode($row['Cliché']) .'" />'.'</td>';
+            echo "<td><a href=../Controller/detail-prod.php?id=".$row['idFour']."&id2=".$row['idRay']."&id3=".$row['idPro']."> Detail </a></td></tr>";
           }
            ?>
         </tr>
       </tbody>
-    </table> 
-     
-    
+    </table>
+
+
     </div>
 </div>
 
